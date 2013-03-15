@@ -436,15 +436,6 @@ window.require.register("views/app_view", function(exports, require, module) {
     AppView.prototype.afterRender = function() {
       var _this = this;
       this.bookmarksView = new BookmarksView();
-      this.bookmarksView.collection.add([
-        {
-          title: "Cozy Cloud",
-          url: "https://cozycloud.fr"
-        }, {
-          title: "Cozy Blog",
-          url: "http://blog.cozycloud.fr"
-        }
-      ]);
       this.bookmarksView.$el.html('<em>loading ...</em>');
       return this.bookmarksView.collection.fetch({
         success: function() {

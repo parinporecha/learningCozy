@@ -13,10 +13,7 @@ module.exports = class AppView extends View
         
     afterRender: ->
         @bookmarksView = new BookmarksView()
-        @bookmarksView.collection.add [
-            {title: "Cozy Cloud", url: "https://cozycloud.fr"}
-            {title: "Cozy Blog", url: "http://blog.cozycloud.fr"}
-        ]
+        
         
         @bookmarksView.$el.html '<em>loading ...</em>'
         
